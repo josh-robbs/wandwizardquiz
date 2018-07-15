@@ -1,14 +1,20 @@
-import React from 'react';
-import logo from '../logo.svg';
+import React from 'react'
+import logo from '../logo.svg'
 
 
-const Footer = (props) => {
+const Footer = () => {
+
   return (
-    <footer className="App-footer flex">
-      <small>&copy; TacoCorp</small>
-      <img src={logo} className="App-logo" alt="logo" />
+    <footer className="footer flex">
+      <div className="footer-elements flex">    
+        <small>&copy; TacoCorp</small>
+        <img  className="react-logo"
+              src={logo} 
+              alt="logo" />
+      </div>
     </footer>
   )
+
 }
 
 export default Footer

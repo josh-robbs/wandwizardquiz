@@ -1,8 +1,8 @@
 * {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
-body{
+body {
   background-image: url("https://www.rpnation.com/media/parchment-paper-div-test.33588/full")
 }
 
@@ -10,43 +10,186 @@ body{
   display: flex;
 }
 
-.App {
-  display: flex;
+
+/* #####################
+########## App #########
+##################### */
+
+.app {
   flex-direction: column;
   text-align: center;
-  height: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 30px;
-}
+
+/* #####################
+######### Header #######
+##################### */
 
 header {
-  background-color: #222;
   height: 150px;
   padding: 20px;
+  background-color: #6d0101;
 }
 
-.App-header {
-  color: white;
-  font-size: 2em;
+.header {
   align-items: center;
   justify-content: space-between;
   margin: 0 10vw;
 }
 
-.App-header img {
+.header h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 4em;
+  color: #f4f4f4;
+}
+
+.header img {
   width: 7vw;
+}
+
+
+/* #####################
+########## Main ########
+##################### */
+
+.main {
+  align-items: center;
+  justify-content: center;
+  margin: 0 6vw;
+}
+
+
+/* #####################
+######## Wizards #######
+##################### */
+
+.wizard-block {
+  flex: 1;
+  flex-wrap: wrap;
+  margin: 3vw 0;
+}
+
+.wizard-thumbs {
+  width: 5vw;
   height: auto;
+  padding: 1px;
+  margin: .5vw;
+  border: 3px solid #021a40;
+  border-radius: 100%;
 }
 
-.App-title {
-  font-size: 1.5em;
+.glowing-border {
+  border: 3px solid greenyellow;
 }
 
-.App-intro {
-  font-size: large;
+
+/* #####################
+######## Message #######
+##################### */
+
+.message-block {
+  height: 30vw;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  margin: 1vw;
+}
+
+.message-block h2 {
+  max-width: 16vw;
+}
+
+#greeting {
+  opacity: 0;
+  font-size: 2rem;
+  animation: fadeIn;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+#prompt {
+  opacity: 0;
+  font-size: 2rem;
+  animation: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn{
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+#accioButton {
+  width: 10vw;
+  height: 3vw;
+  margin: 1vw;
+  font-size: 1em;
+  background-color: darkgrey;
+}
+
+#accioButton:hover {
+  color: #f4f4f4;
+  background-color: gray;
+}
+
+
+/* #####################
+######### Wand #########
+##################### */
+
+.wand-block {
+  height: 22vw;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-image: url("http://images5.fanpop.com/image/photos/29600000/Ollivander-1-garrick-ollivander-29687847-676-442.jpg");
+}
+
+.wand-block h2 {
+  max-width: 18vw;
+  color: yellow;
+}
+
+
+/* #####################
+######### Brochure #####
+##################### */
+
+.brochure {
+  font-size: 2em;
+}
+
+.hidden {
+  display: none;
+}
+
+#brochureButton {
+  padding: 5px;
+}
+
+
+/* #####################
+######### Footer #######
+##################### */
+
+.footer {
+  height: 120px;
+  justify-content: center;
+  color: #f4f4f4;
+  background-color: #6d0101;
+}
+
+.react-logo {
+  height: 30px;
+  animation: App-logo-spin infinite 20s linear;
 }
 
 @keyframes App-logo-spin {
@@ -54,70 +197,7 @@ header {
   to { transform: rotate(360deg); }
 }
 
-.App-footer {
-  background-color: #222;
-  color: white;
-  height: 60px;
-  justify-content: center;
+.footer-elements {
   align-items: center;
-}
-
-.main {
-  align-items: center;
-  justify-content: center;
-  margin: 0 6vw;
-  
-}
-
-.wizardBlock {
-  width: 40%;
-  flex-wrap: wrap;
-  margin: 2vw 0;
-}
-
-.wizardThumbs {
-  width: 5vw;
-  height: auto;
-  margin: .5vw;
-  border-radius: 100%;
-  padding:1px;
-  border:2px solid #021a40;
-}
-
-.glowing-border {
-  border: 5px solid lightblue;
-}
-
-.messageBlock {
-  width: 30vw;
-  height: 30vw;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1vw;
-}
-
-.messageBlock button {
-  width: 10vw;
-  height: 3vw;
-  margin: 1vw;
-}
-
-.messageBlock h2 {
-  max-width: 16vw;
-}
-
-.wandBlock {
-  width: 20vw;
-  height: 10vw;
-  background-image: url("https://i.stack.imgur.com/JAu1i.jpg");
-  justify-content: center;
-  align-content: flex-end;
-
-    -moz-text-fill-color: yellow;
-  -webkit-text-fill-color: yellow;
-    -moz-text-stroke-color: black;
-  -webkit-text-stroke-color: black;
-    -moz-text-stroke-width: 1px;  
-  -webkit-text-stroke-width: 1px;
+  margin-top: 20px;
 }

@@ -1,20 +1,23 @@
-import React from 'react';
+import React from 'react'
+
+import Wizard from './Wizard'
+
 
 const Wizards = (props) => {
-  const wizards = props.wizards.map(wizard => {
-    return <img key={Math.random()+Math.random()}
-                className="wizardThumbs"
-                src={wizard.image} 
-                alt={"picture of " + wizard.name}
-                name={wizard.wand.wood}
-                onClick={props.selectWizard} />
+
+  const wizard = props.wizards.map(wizard => {
+    return <Wizard  key={Math.random()} 
+                    wizard={wizard} 
+                    currentWizard={props.currentWizard} 
+                    selectWizard={props.selectWizard} />
   })
 
   return (
-    <div className="wizardBlock flex">
-      {wizards}
+    <div className="wizard-block flex">
+      {wizard}
     </div>
   )
+
 }
 
 export default Wizards
