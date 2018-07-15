@@ -26,7 +26,7 @@ class App extends Component {
 
   getWizards = (currentPage = 0, pageLimit = 3, data = []) => {
     let endpoints = ["gryffindor", "slytherin", "ravenclaw", "hufflepuff"]
-    return fetch(`http://hp-api.herokuapp.com/api/characters/house/${endpoints[currentPage]}`)
+    return fetch(`https://hp-api.herokuapp.com/api/characters/house/${endpoints[currentPage]}`)
       .then(response => response.json())
       .then(myJson => {
         let filteredJson = this.wizHasWand(myJson)
