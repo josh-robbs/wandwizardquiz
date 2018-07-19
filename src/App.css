@@ -158,7 +158,14 @@ header {
 
 .wand-block h2 {
   max-width: 18vw;
-  color: yellow;
+  color: #6d0101;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+  padding: 0 20px;
+}
+
+.wand-message-background {
+  border: solid 1px black;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -168,6 +175,18 @@ header {
 
 .brochure {
   font-size: 2em;
+  background-color: gray;
+}
+
+.brochure p {
+  margin-top: 0;
+  padding-top: 1em;
+  font-size: 1em;
+}
+
+.brochure ol {
+  margin-bottom: 0;
+  padding-bottom: 1em;
 }
 
 .hidden {
@@ -175,7 +194,11 @@ header {
 }
 
 #brochureButton {
-  padding: 5px;
+  padding: 1px;
+  background-color: gray;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-bottom: black 1px solid;
 }
 
 
@@ -184,7 +207,7 @@ header {
 ##################### */
 
 .footer {
-  height: 140px;
+  height: 110px;
   justify-content: center;
   color: #f4f4f4;
   background-color: #6d0101;

@@ -13,10 +13,7 @@ class Brochure extends Component {
 
   render() {
     return (
-      <section>
-        <div id="brochureButton" onClick={this.toggleBrochure}>
-          <i className="fas fa-ellipsis-h"></i>
-        </div>
+      <section className="brochure-section">
         <div className= {this.state.open ? "brochure hidden" : "brochure"}>
           <p>If you love Harry Potter and want to add to your Harry Potter 
             trivia knowledge base, this app is for you!</p>
@@ -25,6 +22,9 @@ class Brochure extends Component {
               <li>Read Olivander's description.</li>
               <li>Try to guess which witch or wizard owns the wand!</li>
             </ol>
+        </div>
+        <div id="brochureButton" onClick={this.toggleBrochure}>
+          <p>How to Play</p>
         </div>
       </section>
     )

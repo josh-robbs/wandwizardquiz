@@ -13,7 +13,9 @@ const Wand = (props) => {
 
   return (
     <div className="wand-block flex">
-      {wandMessage}
+      <div className="wand-message-background">
+        {wandMessage}
+      </div>
     </div>
   )
 

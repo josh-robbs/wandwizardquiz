@@ -22,8 +22,6 @@ class App extends Component {
     }
   }
 
-////getWizards pulls from API, filters, sets state
-
   getWizards = (currentPage = 0, pageLimit = 3, data = []) => {
     let endpoints = ["gryffindor", "slytherin", "ravenclaw", "hufflepuff"]
     return fetch(`https://hp-api.herokuapp.com/api/characters/house/${endpoints[currentPage]}`)
@@ -37,11 +35,6 @@ class App extends Component {
       })
   }
 
-
-  ////wizHasWand filters allWizards down to those with wand data of at least wood
-  ////wizHasWand filters out Ginny because she has the same wood as Voldemort
-  ////wizHasWand filters out Slughorn to make it 12 total wizards
-
   wizHasWand = (array) => {
     return array.filter((element) => {
       return element.wand.wood && element.name !== "Ginny Weasley" && element.name !== "Horace Slughorn"
@@ -53,20 +46,14 @@ class App extends Component {
       .then(data => this.setState({allWizards: data}))
   }
 
-////selectWizard tracks the current selected wizard by updating state
-
   selectWizard = (event) => {
     this.setState({currentWizard: event.target.name})
   }
-
-////getWand generates a random wand
 
   getWand = () => {
     let randomWand = this.state.allWizards[Math.floor(Math.random()*this.state.allWizards.length)].wand
     return randomWand
   }
-
-////newWand populates a new wand on click
 
   newWand = () => {
     let wand = this.getWand()
